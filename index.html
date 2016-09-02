@@ -5,32 +5,32 @@
     <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
     <link href="css/styles.css" rel="stylesheet" type="text/css">
     <script src="js/jquery-3.1.0.js"></script>
-    <script src="js/bootstrap.js"></script>
+    <script src="js/bootstrap.min.js"></script>
     <script src="js/scripts.js"></script>
     <title>Big Caesaer's</title>
   </head>
   <body>
-    <h1>Big Caesaer's Unbearably Long Name, Pizza</h1>
+    <h1>Big Caeser's Unbearably Long Name, Pizza</h1>
     <div class='container'>
-      <form id='order'>
+      <form id='pizza'>
         <div class='row'>
           <div class='col-sm-4'>
-            <div class='form-group size'>
+            <div id='size'>
               <h4>Select your size</h4>
               <div class="checkbox">
-                <label><input type="checkbox" name="topping" value="large">Large</label>
+                <label><input type="checkbox" name="size" value="large">Large</label>
               </div>
               <div class="checkbox">
-                <label><input type="checkbox" name="topping" value="Medium">Medium</label>
+                <label><input type="checkbox" name="size" value="Medium">Medium</label>
               </div>
               <div class="checkbox">
-                <label><input type="checkbox" name="topping" value="Small">Small</label>
+                <label><input type="checkbox" name="size" value="Small">Small</label>
               </div>
             </div>
           </div>
 
           <div class='col-sm-4'>
-            <div class='form-group toppings'>
+            <div id='toppings'>
               <h6>Choose a topping only $1 extra.. each</h6>
               <div class="checkbox">
                 <label><input type="checkbox" name="topping" value="extra-cheese">Extra Cheese</label>
@@ -50,15 +50,16 @@
             </div>
           </div>
         </div>
+        <button id="submit" class="btn btn-success">Submit Order</button>
       </form>
-
 
         <div class="col-sm-12">
           <div id="order">
-          <h2>Order:</h2>
-
+            <div id="total">
+              <h2>Order:</h2>
             </div>
-            <button id="submit-order" class="btn btn-success">Submit Order</button>
+          </div>
+
         </div>
 
     </div>

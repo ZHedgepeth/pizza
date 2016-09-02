@@ -2,7 +2,7 @@
 function pizzaStore(pizzaSize, pizzaTopping) {
   this.cost = 0
   this.size = pizzaSize;
-  this.topping = pizzaTopping;
+  this.topping = [];
 }
 
 pizzaStore.prototype.finalPrice = function() {
@@ -15,10 +15,29 @@ pizzaStore.prototype.finalPrice = function() {
   else if (this.size === 'small') {
     this.cost += 12.50 + (this.topping.length * 1)
   }
+  else if (this.size != 'large', 'medium', 'small') {
+    alert("Enter a size if you want to eat!");
+  }
 }
+$(document).ready(function() {
+  $('#pizza').submit(function(event) {
+  event.preventDefault();
+  var toppingsCheckArray = [];
+    var sizeCheck
 
-var totalToppings =[]
-$(".toppings input[type='checkbox']:checked").each(function() {
-  totalToppings.push($(this).val())
-})
-alert(totalToppings)
+  var newPizza = new pizzaStore(toppingCheckArray, sizeCheck);
+
+  var sizeCheck = $("input:checkbox[name='size']:checked").each(function() {
+    newPizza.size.push($(this).val());
+  })
+
+  var toppingsCheckArray = [];
+   $("input:checkbox[name='topping']:checked").each(function() {
+    newPizza.topping.push($(this).val());
+  })
+
+
+  $("").text('stringtest');
+
+  });
+});
