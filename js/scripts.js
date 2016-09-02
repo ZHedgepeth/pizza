@@ -16,3 +16,9 @@ pizzaStore.prototype.finalPrice = function() {
     this.cost += 12.50 + (this.topping.length * 1)
   }
 }
+
+var totalToppings =[]
+$(".toppings input[type='checkbox']:checked").each(function() {
+  totalToppings.push($(this).val())
+})
+alert(totalToppings)
